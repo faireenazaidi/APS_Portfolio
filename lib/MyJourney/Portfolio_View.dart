@@ -21,7 +21,6 @@ class _MyJourneyHomePageState extends State<MyJourneyHomePage> with TickerProvid
             )
           ],
         ),
-
       ),
     );
   }

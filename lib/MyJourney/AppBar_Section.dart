@@ -8,7 +8,10 @@ class HeaderBar extends StatefulWidget{
 class _HeaderBarState extends State<HeaderBar> with TickerProviderStateMixin{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Row(
+      children: [
+        Text("APS")
+      ],
 
     );
   }
