@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
-import '../Colors.dart';
+import '../Widgets/Colors.dart';
 import 'Grid_painter.dart';
 
 class AnimatedBackground extends StatelessWidget {
@@ -34,22 +34,23 @@ class AnimatedBackground extends StatelessWidget {
             animation: particleController,
             builder: (context, child) {
               final progress = (particleController.value + (index * 0.1)) % 1.0;
-              final curvedProgress = Curves.easeInOut.transform(progress);
-
               return Positioned(
                 left: MediaQuery.of(context).size.width * ((index + 1) / 10),
-                bottom: -20 + (curvedProgress * (MediaQuery.of(context).size.height + 120)),
+                bottom: -20 +
+                    (progress * (MediaQuery.of(context).size.height + 120)),
                 child: Opacity(
-                  opacity: curvedProgress < 0.1 ? curvedProgress * 10 : (curvedProgress > 0.9 ? (1 - curvedProgress) * 10 : 1),
+                  opacity: progress < 0.1
+                      ? progress * 10
+                      : (progress > 0.9 ? (1 - progress) * 10 : 1),
                   child: Container(
                     width: 4,
                     height: 4,
                     decoration: BoxDecoration(
-                      color: AppColors.primaryGold.withOpacity(0.3),
+                      color: AppColors.primaryGold,
                       shape: BoxShape.circle,
                       boxShadow: [
                         BoxShadow(
-                          color: AppColors.primaryGold.withOpacity(0.3),
+                          color: AppColors.primaryGold.withOpacity(0.8),
                           blurRadius: 10,
                           spreadRadius: 2,
                         ),
@@ -96,8 +97,8 @@ class AnimatedBackground extends StatelessWidget {
                       shape: BoxShape.circle,
                       gradient: RadialGradient(
                         colors: [
-                          AppColors.warmGolden.withOpacity(0.4),
-                          AppColors.warmGolden.withOpacity(0.2),
+                          AppColors.darkGold.withOpacity(0.4),
+                          AppColors.darkGold.withOpacity(0.2),
                           Colors.transparent,
                         ],
                       ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Colors.dart';
+import 'Widgets/Colors.dart';
 import 'MyJourney/Portfolio_View.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const PortfolioApp());
@@ -13,15 +12,16 @@ class PortfolioApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Animesh Pratap Singh',
+      title: 'Animesh Pratap Singh - Portfolio',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.dark,
         scaffoldBackgroundColor: AppColors.backgroundDark,
-        primaryColor: AppColors.primaryGold,
+        fontFamily: 'Segoe UI',
       ),
-      home: MyJourneyHomePage(),
+      home: const PortfolioHomePage(),
+
     );
 
   }
 }
+

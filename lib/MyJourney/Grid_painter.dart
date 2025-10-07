@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../Colors.dart';
+import '../Widgets/Colors.dart';
 
 class GridPainter extends CustomPainter {
   final double progress;
@@ -10,7 +9,7 @@ class GridPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color =  AppColors.primaryGold.withOpacity(0.03)
+      ..color = AppColors.primaryGold.withOpacity(0.03)
       ..strokeWidth = 1;
 
     final offset = progress * 50;

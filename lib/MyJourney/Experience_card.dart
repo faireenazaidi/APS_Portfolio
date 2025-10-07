@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../Colors.dart';
+import 'package:portfolio/Widgets/MyTextTheme.dart';
+import '../Widgets/Colors.dart';
 import 'Animated_bulletpoints.dart';
 
 class ExperienceCard extends StatelessWidget {
@@ -19,10 +20,10 @@ class ExperienceCard extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title, style:  TextStyle(fontSize: 26, fontWeight: FontWeight.w900, color: AppColors.primaryGold,),
+        Text(title, style: MyTextTheme.primaryGoldNorBold
         ),
         const SizedBox(height: 8),
-        Text(company, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color:AppColors.mediumGray,),
+        Text(company, style: MyTextTheme.mediumGrayS.copyWith(fontWeight: FontWeight.w600)
         ),
         const SizedBox(height: 24),
         ...points.map((point) => AnimatedBulletPoint(text: point)),

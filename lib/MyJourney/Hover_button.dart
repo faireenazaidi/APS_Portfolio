@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../Colors.dart';
+import '../Widgets/Colors.dart';
 
 class HoverNavButton extends StatefulWidget {
   final String text;
@@ -66,8 +66,7 @@ class HoverNavButtonState extends State<HoverNavButton>
                       color:  AppColors.primaryGold,
                       boxShadow: [
                         BoxShadow(
-                          color:  AppColors.primaryGold
-                              .withOpacity(0.5 * _animation.value),
+                          color:  AppColors.primaryGold.withOpacity(0.5 * _animation.value),
                           blurRadius: 10,
                         ),
                       ],

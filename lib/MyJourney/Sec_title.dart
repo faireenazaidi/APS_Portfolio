@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/MyTextTheme.dart';
-import '../Colors.dart';
+import 'package:portfolio/Widgets/MyTextTheme.dart';
+import '../Widgets/Colors.dart';
 
 class SectionTitle extends StatefulWidget {
   final String title;
@@ -62,7 +62,7 @@ class _SectionTitleState extends State<SectionTitle> with SingleTickerProviderSt
               child: Text(
                 widget.title,
                 textAlign: TextAlign.center,
-                style: MyTextTheme.normalWB
+                style: MyTextTheme.largeWB.copyWith(fontSize: 32)
               ),
             ),
             const SizedBox(height: 16),
@@ -82,7 +82,7 @@ class _SectionTitleState extends State<SectionTitle> with SingleTickerProviderSt
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color:  AppColors.primaryGold.withOpacity(0.5),
+                        color: AppColors.primaryGold.withOpacity(0.5),
                         blurRadius: 20,
                       ),
                     ],

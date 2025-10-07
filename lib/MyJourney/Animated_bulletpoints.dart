@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../Colors.dart';
+import 'package:portfolio/Widgets/MyTextTheme.dart';
+import '../Widgets/Colors.dart';
 
 class AnimatedBulletPoint extends StatefulWidget {
   final String text;
@@ -55,9 +56,7 @@ class _AnimatedBulletPointState extends State<AnimatedBulletPoint>
           ),
           const SizedBox(width: 16),
           Expanded(
-            child: Text(widget.text,
-              style:  TextStyle(fontSize: 16, color: AppColors.mediumGray, height: 1.6,),
-            ),
+            child: Text(widget.text, style:  MyTextTheme.mediumGrayS),
           ),
         ],
       ),
